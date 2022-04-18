@@ -10,30 +10,11 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
     </head>
     <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        
+
         <!-- Page content-->
         <div class="container"> 
             <div class="row">
@@ -41,29 +22,66 @@
                     <div class="card">
                         <img src="images/profile_picture.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Robotics and aerospace engineer</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">Robotics and aerospace engineer</h5>
+                            <p class="card-text" style="color:#858484";>
+                                <small> MSc in Robotics and Space technologies (2018 - 2021) </small>
+                            </p>
+
+                            <p class="card-text" style="color:#858484";>
+                                <small> BSc in Microtechnics (2015 - 2018) </small>
+                            </p>
                         </div>
                         <div class="card-body">
-                          <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
+                            <div class="row">
+
+                                <div class="col-4">
+                                    <a href="https://github.com/AlbericDeLajarte">
+                                        <img class="img-fluid" alt="My Github" src="images/github.png"
+                                        width=50" height="50">
+                                    </a>
+                                </div>
+
+                                <div class="col-4">
+                                    <a href = "mailto: albericlajarte@gmail.com">
+                                        <img class="img-fluid" alt="My email" src="images/gmail.png"
+                                        width=50" height="50">
+                                    </a>
+                                </div>
+
+                                <div class="col-4">
+                                    <a href="https://www.linkedin.com/in/alb%C3%A9ric-de-lajarte/">
+                                        <img class="img-fluid" alt="My Linkedin" src="images/linkedin.png"
+                                        width=50" height="50">
+                                    </a>
+                                </div>
+
+                                
+
+                                    
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-9 bg-light p-3 border">
+                <!-- Projects cards -->
+                <div class="col-sm-9 bg-light p-3 border" style="height: 600px; overflow-y: scroll;"  >
                     
 
                     <!-- First row -->
                     <div class="row">
                         <div class="col">
-                            <div class="card">
+                            <div class="card border-secondary">
                                 <div class="card-header">
                                     <h5 class="card-title">Research assistant</h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small> Learning Algorithm and System Laboratory <br>
+                                            Nov. 2021 - Nov. 2022 </small>
+                                    </p>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text">
-                                        Some description
+                                        Working on various research projects of the lab related to the
+                                        control of robotic systems in collaborative environments.
                                     </p>
                                 </div>
                               </div>
@@ -71,13 +89,19 @@
                         </div>
 
                         <div class="col">
-                            <div class="card">
+                            <div class="card border-secondary">
                                 <div class="card-header">
-                                    <h5 class="card-title">Anti-tremor pen</h5>
+                                    <h5 class="card-title">Development of an anti-tremor pen</h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small> Debiopharm Challenge <br>
+                                            Aug. 2021 - Nov. 2021 </small>
+                                    </p>
                                 </div>
                                 <div class="card-body">
+                                    <a href="#" class="stretched-link"></a>
                                     <p class="card-text">
-                                        Some description
+                                        Developed a mechanical anti-tremor pen to help people with 
+                                        essential tremor. We won the second place and the technological price.
                                     </p>
                                 </div>
                               </div>
@@ -88,26 +112,140 @@
                     <!-- Second row -->
                     <div class="row mt-2">
                         <div class="col">
-                            <div class="card">
+                            <div class="card border-secondary">
                                 <div class="card-header">
                                     <h5 class="card-title">Internship: Dark room setup</h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small>ClearSpace SA <br>
+                                            July. 2021 - Aug. 2021 </small>
+                                    </p>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text">
-                                        Some description
+                                        Control of a mechanism to train vision-based navigation algorithms and programmed its UI.
                                     </p>
                                 </div>
                               </div>  
                         </div>
 
                         <div class="col">
-                            <div class="card">
+                            <div class="card border-secondary">
                                 <div class="card-header">
-                                    <h5 class="card-title">Master thesis: Control of a sounding rocket</h5>
+                                    <h5 class="card-title">Master thesis: GNC of a sounding rocket</h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small>Automatic Control Laboratory <br>
+                                            Dec. 2020 - July. 2021 </small>
+                                    </p>
                                 </div>
                                 <div class="card-body">
                                     <p class="card-text">
-                                        Some description
+                                        Developed optimal control and guidance algorithms using MPC. 
+                                        Created a new simulation framework to develop and test these algorithms.
+                                    </p>
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Third row -->
+                    <div class="row mt-2">
+
+                        <div class="col">
+                            <div class="card border-secondary">
+                                <div class="card-header">
+                                    <h5 class="card-title">Student project: Project Manager</h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small>EPFL Rocket Team (Project Icarus) <br>
+                                            Aug. 2020 - Sept. 2021 </small>
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Started new project on active stabilization and guidance of a student rocket with a team of 12 students.
+                                    </p>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-secondary">
+                                <div class="card-header">
+                                    <h5 class="card-title">Internship: Research for GlexSys</h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small>RUAG Space <br>
+                                            Sept. 2020 - Dec. 2020 </small>
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Design and tradeoff on bi-phasic gas-liquid transfer technologies.
+                                        Development of a lab setup to demonstrate ozone sterilization.
+                                    </p>
+                                </div>
+                            </div>  
+                        </div>
+
+                        
+
+                    </div>
+
+                    <!-- Fourth row -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card border-secondary">
+                                <div class="card-header">
+                                    <h5 class="card-title">Freelance project: Calibration for IMU </h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small>GaitUp SA <br>
+                                            July. 2020 - Aug. 2020 </small>
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Developed a three-axes mechanism to automatically calibrate IMU sensors.
+                                    </p>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card border-secondary">
+                                <div class="card-header">
+                                    <h5 class="card-title">Student project: System engineer </h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small>EPFL Rocket Team (Project Bellalui 1) <br>
+                                            July. 2019 - Aug. 2021 </small>
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Co-lead a team of 80 students to develop and launch a sounding rocket using hybrid propulsion.
+                                    </p>
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Fifth row -->
+                    <div class="row mt-2">
+                        
+                        <div class="col">
+                            <div class="card border-secondary">
+                                <div class="card-header">
+                                    <h5 class="card-title">Student project: Team leader </h5>
+                                    <p class="card-text" style="color:#858484";>
+                                        <small>EPFL Rocket Team (Project Eiger) <br>
+                                            March. 2018 - June. 2019 </small>
+                                    </p>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Co-lead a team of 6 students to develop a new modular flight computer for a sounding rocket.
+
                                     </p>
                                 </div>
                               </div>
