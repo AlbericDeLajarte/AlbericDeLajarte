@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ATPen project</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
+    </head>
+
+    <body>
+        <!-- Page content-->
+        <div class="container"> 
+            <div class="row">
+                <div class="col-3 bg-light p-3">
+                    <div class="card border-secondary">
+                        <img src="../images/profile_picture.jpg" class="card-img-top" alt="Alberic de Lajarte">
+                        <div class="card-body">
+                            <h5 class="card-title">Robotics and aerospace engineer</h5>
+                            <p class="card-text" style="color:#858484";>
+                                <small> MSc in Robotics and Space technologies (2018 - 2021) </small>
+                            </p>
+
+                            <p class="card-text" style="color:#858484";>
+                                <small> BSc in Microtechnics (2015 - 2018) </small>
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <a href="../index.html" class="stretched-link"></a>
+                            <div class="row">
+
+                                <div class="col-4" style="z-index:3; position:relative;">
+                                    <a href="https://github.com/AlbericDeLajarte">
+                                        <img class="img-fluid" alt="My Github" src="../images/github.png"
+                                        width=50" height="50">
+                                    </a>
+                                </div>
+
+                                <div class="col-4" style="z-index:3; position:relative;">
+                                    <a href = "mailto: albericlajarte@gmail.com">
+                                        <img class="img-fluid" alt="My email" src="../images/gmail.png"
+                                        width=50" height="50">
+                                    </a>
+                                </div>
+
+                                <div class="col-4" style="z-index:3; position:relative;">
+                                    <a href="https://www.linkedin.com/in/alb%C3%A9ric-de-lajarte/">
+                                        <img class="img-fluid" alt="My Linkedin" src="../images/linkedin.png"
+                                        width=50" height="50">
+                                    </a>
+                                </div>
+             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Projects cards -->
+                <div class="col-sm-7 bg-light p-3 border" style="height: 600px; overflow-y: scroll;"  >
+                    <h4> Project ATPen: Developemnt of an anti-tremor pen</h4>
+                    <h6 style="color:#858484";> EPFL Rocket Team : Aug. 2020 - Sept. 2021 </h6>
+
+                    <p class="text-justify">
+                        For my third year at the EPFL Rocket Team, I started a new research project to replace our passive 
+                        rocket fins stabilization with thrust vector control (TVC), thus allowing to control the rocket trajectory and explore 
+                        propulsive landing technologies.                       
+
+                        <figure class="figure text-center" style="max-width:40%; float:right;">
+                            <img src="../images/jet_vane_test.jpg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="jet vanes setup">
+                            <figcaption class="figure-caption text-center">First test setup for the jet vanes</figcaption>
+                        </figure>
+
+                        After a semester of research in Autumn 2020, I recruited a team of 12 students
+                        to work on the TVC mechanism and test bench, and help me develop the Guidance, 
+                        Navigation and Control (GNC) algorithms I was working on as part of my thesis.
+                        <br>
+                        To control the thrust direction of the rocket engine, we developed custom jet vanes, 
+                        which are small aerodynmaic surfaces that redirects the flow of the engine. We simulated,
+                        manufactured and tested many different shapes and materials to have the right thermal
+                        and aerodynamic properties.
+
+                        <br> <br>
+
+                        A custom PCB was developed by <a href="https://www.linkedin.com/in/iacopo-sprenger-b6547a12a/">Iacopo Sprenger</a>
+                        to integrate a RaspberryPi 4 into our modular
+                        flight computer. This gives us a lot more processing power and let us
+                        experiment with advanced GNC algorithms.
+
+                        <figure class="figure text-center p-2" style="max-width:30%; float:left;">
+                            <img src="../images/cm4_board.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="custom pcb for the CM4">
+                            <figcaption class="figure-caption text-center">Custom PCB for the RaspberryPi</figcaption>
+                        </figure>
+
+                        <br>
+                        To control the vehicle, we used Model Predictive Control (MPC) running on the Rapsberry Pi
+                        at 50Hz to directly control the actuators. Another MPC was used at lower
+                        frequency to generate optimal reference trajectories for the controller.
+                        Finally we used an extended Kalman filter to estimates external perturbations
+                        and model mismatches. <br>
+                        Most of these algorithms were developed by <a href="https://www.linkedin.com/in/raphael-linsen/">Raphaël Linsen</a>
+                        and tested on our simulator, then deployed on our custom drone. 
+                        Check our recent <a href="https://infoscience.epfl.ch/record/288898">paper</a>
+                        for more information on this project !
+                        <br>
+
+                        <figure class="figure text-center p-3" style="max-width:70%">
+                            <img src="../images/drone_MPC_traj.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="Our custom drone tracking a complex trajectory">
+                            <figcaption class="figure-caption text-center">Our custom drone tracking a complex trajectory</figcaption>
+                        </figure>
+                        
+                    </p>
+                    
+
+                
+
+                
+                </div> 
+
+                <div class="col-2 bg-light p-3">
+
+                    <h4> What I learned</h4>
+
+                    Management
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 40%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 25%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <br>
+                    System engineering
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <br>
+                    Kalman filtering
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 60%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 15%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <br>
+                    Thermo-aerodynamic
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 5%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+         </div>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>

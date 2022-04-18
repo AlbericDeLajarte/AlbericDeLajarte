@@ -4518,6 +4518,7 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -11285,4 +11286,17 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+
+.card-project:hover{
+  /* background-color: #055160;*/
+  color: rgba(0, 0, 0, 0);  
+  background-image: url("../images/show_more.png");
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-project:hover .card-text{
+  opacity: 0;
 }
