@@ -62,7 +62,7 @@
 
 
 
-                <!-- Projects cards -->
+                <!-- Projects description -->
                 <div class="col-sm-7 bg-light p-3 border" style="height: 600px; overflow-y: scroll;"  >
                     <h4> Project ATPen: Developemnt of an anti-tremor pen</h4>
                     <h6 style="color:#858484";> Debiopharm Challenge: Aug. 2021 - Nov. 2021 </h6>
@@ -70,58 +70,44 @@
                     <p class="text-justify">
 
                         This is a small project I did with my friend <a href="https://www.linkedin.com/in/yves-martin-b2a093131/">Yves Martin</a>.
-                        The objective is to develop a special pen to help people with 
+                        The objective was to develop a special pen to help people with 
                         essential tremor writing better. This idea was selected as part of the Debiopharm challenge,
-                        and financed 5k$ to create a first prototype in four months. 
-
-                        <br> <br><br> <br><br> <br>
-                        For my third year at the EPFL Rocket Team, I started a new research project to replace our passive 
-                        rocket fins stabilization with thrust vector control (TVC), thus allowing to control the rocket trajectory and explore 
-                        propulsive landing technologies.                       
-
+                        and financed 5'000$ to create a fonctional prototype in four months. We had to compete
+                        with five other teams working on other projects related to health technologies.
                         <figure class="figure text-center" style="max-width:40%; float:right;">
-                            <img src="../images/jet_vane_test.jpg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="jet vanes setup">
-                            <figcaption class="figure-caption text-center">First test setup for the jet vanes</figcaption>
+                            <img src="../images/debiopharm_team.jpeg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="jet vanes setup">
+                            <figcaption class="figure-caption text-center">The challengers. Credit: Debiopharm</figcaption>
                         </figure>
 
-                        After a semester of research in Autumn 2020, I recruited a team of 12 students
-                        to work on the TVC mechanism and test bench, and help me develop the Guidance, 
-                        Navigation and Control (GNC) algorithms I was working on as part of my thesis.
+                        Our plan was to develop a damping system that would absorb the 
+                        tremor vibration around 5Hz. To make our design simpler, cheaper
+                        and more robust, we opted for a fully mechanical solution based 
+                        on spring damper technologies. The tip of the pen can be decoupled
+                        from the pen handle by integrating a custom spring in between. Then the 
+                        cut-off frequency can be tuned by weighting the pen and adding damping elements.
                         <br>
-                        To control the thrust direction of the rocket engine, we developed custom jet vanes, 
-                        which are small aerodynmaic surfaces that redirects the flow of the engine. We simulated,
-                        manufactured and tested many different shapes and materials to have the right thermal
-                        and aerodynamic properties.
 
-                        <br> <br>
+                        The difficulty was to integrate all these elements in a pen,
+                        while guaranteeing good damping performances. After many iterations,
+                        we opted for a magnetic damping based on Eddy's current that would use very little space.
 
-                        A custom PCB was developed by <a href="https://www.linkedin.com/in/iacopo-sprenger-b6547a12a/">Iacopo Sprenger</a>
-                        to integrate a RaspberryPi 4 into our modular
-                        flight computer. This gives us a lot more processing power and let us
-                        experiment with advanced GNC algorithms.
-
-                        <figure class="figure text-center p-2" style="max-width:30%; float:left;">
-                            <img src="../images/cm4_board.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="custom pcb for the CM4">
-                            <figcaption class="figure-caption text-center">Custom PCB for the RaspberryPi</figcaption>
+                        <figure class="figure text-center p-2" style="max-width:50%; float:left;">
+                            <img src="../images/pen_final_proto.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="jet vanes setup">
+                            <figcaption class="figure-caption text-center">The challengers. Credit: Debiopharm</figcaption>
                         </figure>
 
-                        <br>
-                        To control the vehicle, we used Model Predictive Control (MPC) running on the Rapsberry Pi
-                        at 50Hz to directly control the actuators. Another MPC was used at lower
-                        frequency to generate optimal reference trajectories for the controller.
-                        Finally we used an extended Kalman filter to estimates external perturbations
-                        and model mismatches. <br>
-                        Most of these algorithms were developed by <a href="https://www.linkedin.com/in/raphael-linsen/">Raphaël Linsen</a>
-                        and tested on our simulator, then deployed on our custom drone. 
-                        Check our recent <a href="https://infoscience.epfl.ch/record/288898">paper</a>
-                        for more information on this project !
+                        We manufactured this design using conventional machining and 3D printing.
+                        After some satisfactory tests with a patient, we presented our results to the jury
+                        and won the second place and a special technical price for the quality of the design.
                         <br>
 
-                        <figure class="figure text-center p-3" style="max-width:70%">
-                            <img src="../images/drone_MPC_traj.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="Our custom drone tracking a complex trajectory">
-                            <figcaption class="figure-caption text-center">Our custom drone tracking a complex trajectory</figcaption>
-                        </figure>
-                        
+                        This price allowed us to finance a new chapter for this project: we started
+                        a more rigorous study of our prototype to see how patients used our device
+                        and measure it's impact on their writting.
+                        After analyzing our first results, we are considering to develop a new version
+                        based on active damping with closed-loop control in order to improve the damping
+                        performances. 
+
                     </p>
                     
 
@@ -134,32 +120,36 @@
 
                     <h4> What I learned</h4>
 
-                    Management
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 40%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                        <div class="progress-bar" role="progressbar" style="width: 25%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                    <br>
-                    System engineering
+                    Mechanical design
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
                         <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-
                     <br>
-                    Kalman filtering
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 60%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                        <div class="progress-bar" role="progressbar" style="width: 15%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
 
-                    <br>
-                    Thermo-aerodynamic
+                    Machining
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 5%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
                         <div class="progress-bar" role="progressbar" style="width: 20%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
+                    <br>
+
+                    Vibration theory
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 10%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 25%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <br>
+
+                    Medical study
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 5%; background-color: #b4cdff" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 10%; background-color: #6c9dff" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+                    <br>
+                    
 
 
                 </div>
