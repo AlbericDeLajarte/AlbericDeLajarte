@@ -13,19 +13,22 @@
         <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
     </head>
 
-    <body>
+    <body style="background: #20202A;">
+
         <!-- Page content-->
-        <div class="container"> 
+        <div class="container-fluid mt-3"> 
             <div class="row">
-                <div class="col-sm-3 bg-light p-3">
-                    <div class="card border-secondary">
-                        <img src="images/profile_picture.jpg" class="card-img-top" alt="...">
+                <div class="col-md-3 profile-card">
+                    
+                    <div class="card dark-card">
+                        <img src="images/profile_picture.jpg" class="rounded-circle profile-picture" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Robotics and aerospace engineer</h5>
-                            <p class="card-text" style="color:#858484";>
+                            <h5 class="my-title">
+                                Robotics and aerospace engineer</h5>
+                            <p style="color:#858484;">
                                 <small> MSc in Robotics and Space technologies (2018 - 2021) </small>
                             </p>
-
+                            
                             <p class="card-text" style="color:#858484";>
                                 <small> BSc in Microtechnics (2015 - 2018) </small>
                             </p>
@@ -37,22 +40,22 @@
 
                                 <div class="col-4" style="z-index:3; position:relative;">
                                     <a href="https://github.com/AlbericDeLajarte">
-                                        <img class="img-fluid" alt="My Github" src="images/github.png"
-                                        width=50" height="50">
+                                        <img class="img-fluid" alt="My Github" src="images/icon/github@3x.png"
+                                        width=45" height="45">
                                     </a>
                                 </div>
 
                                 <div class="col-4" style="z-index:3; position:relative;">
                                     <a href = "mailto: albericlajarte@gmail.com">
-                                        <img class="img-fluid" alt="My email" src="images/gmail.png"
-                                        width=50" height="50">
+                                        <img class="img-fluid" alt="My email" src="images/icon/email@3x.png"
+                                        width=45" height="45">
                                     </a>
                                 </div>
 
                                 <div class="col-4" style="z-index:3; position:relative;">
                                     <a href="https://www.linkedin.com/in/alb%C3%A9ric-de-lajarte/">
-                                        <img class="img-fluid" alt="My Linkedin" src="images/linkedin.png"
-                                        width=50" height="50">
+                                        <img class="img-fluid" alt="My Linkedin" src="images/icon/linkedin@3x.png"
+                                        width=45" height="45">
                                     </a>
                                 </div>
      
@@ -62,13 +65,14 @@
                 </div>
 
                 <!-- Projects cards -->
-                <div class="col-sm-9 bg-light p-3 border" style="height: 600px; overflow-y: scroll;"  >
+                <!-- <div class="col-sm-9" style="height: 600px; overflow-y: scroll;"  > -->
+                <div class="col-md-9 project-grid">
                     
 
                     <!-- First row -->
                     <div class="row">
                         <div class="col-sm">
-                            <div class="card border-secondary">
+                            <div class="card dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Research assistant</h5>
                                     <p class="card-text" style="color:#858484";>
@@ -87,7 +91,7 @@
                         </div>
 
                         <div class="col-sm">
-                            <div class="card border-secondary  card-project">
+                            <div class="card card-project  dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Development of an anti-tremor pen</h5>
                                     <p class="card-text" style="color:#858484";>
@@ -110,7 +114,7 @@
                     <!-- Second row -->
                     <div class="row mt-2">
                         <div class="col-sm">
-                            <div class="card border-secondary">
+                            <div class="card dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Internship: Dark room setup</h5>
                                     <p class="card-text" style="color:#858484";>
@@ -127,7 +131,7 @@
                         </div>
 
                         <div class="col-sm">
-                            <div class="card border-secondary">
+                            <div class="card dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Master thesis: GNC of a sounding rocket</h5>
                                     <p class="card-text" style="color:#858484";>
@@ -152,7 +156,7 @@
                     <div class="row mt-2">
                         <div class="col-sm">
                             
-                            <div class="card border-secondary card-project">
+                            <div class="card dark-card">
                              
                                 <div class="card-header">                   
                                     <h5 class="card-title">Student project: Project Manager</h5>
@@ -174,7 +178,7 @@
                         </div>
 
                         <div class="col-sm">
-                            <div class="card border-secondary">
+                            <div class="card dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Internship: Research for GlexSys</h5>
                                     <p class="card-text" style="color:#858484";>
@@ -198,7 +202,7 @@
                     <!-- Fourth row -->
                     <div class="row mt-2">
                         <div class="col-sm">
-                            <div class="card border-secondary">
+                            <div class="card dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Freelance project: Calibration for IMU </h5>
                                     <p class="card-text" style="color:#858484";>
@@ -215,7 +219,7 @@
                         </div>
 
                         <div class="col-sm">
-                            <div class="card border-secondary">
+                            <div class="card dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Student project: System engineer </h5>
                                     <p class="card-text" style="color:#858484";>
@@ -237,7 +241,7 @@
                     <div class="row mt-2">
                         
                         <div class="col-sm">
-                            <div class="card border-secondary">
+                            <div class="card dark-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Student project: Team leader </h5>
                                     <p class="card-text" style="color:#858484";>
