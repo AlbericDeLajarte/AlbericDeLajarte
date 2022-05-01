@@ -10,6 +10,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Archivo:300|Open+Sans:300,600" rel="stylesheet">
         <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
     </head>
 
@@ -18,55 +19,121 @@
         <!-- Page content-->
         <div class="container-fluid mt-3"> 
             <div class="row">
-                <div class="col-md-3 profile-card">
-                    
-                    <div class="card dark-card">
-                        <img src="images/profile_picture.jpg" class="rounded-circle profile-picture" alt="...">
-                        <div class="card-body">
-                            <h5 class="my-title">
-                                Robotics and aerospace engineer</h5>
-                            <p style="color:#858484;">
-                                <small> MSc in Robotics and Space technologies (2018 - 2021) </small>
-                            </p>
-                            
-                            <p class="card-text" style="color:#858484";>
-                                <small> BSc in Microtechnics (2015 - 2018) </small>
-                            </p>
-                            
-                        </div>
-                        <div class="card-body">
-                            <a href="" class="stretched-link"></a>
-                            <div class="row">
-
-                                <div class="col-4" style="z-index:3; position:relative;">
-                                    <a href="https://github.com/AlbericDeLajarte">
-                                        <img class="img-fluid" alt="My Github" src="images/icon/github@3x.png"
-                                        width=45" height="45">
-                                    </a>
-                                </div>
-
-                                <div class="col-4" style="z-index:3; position:relative;">
-                                    <a href = "mailto: albericlajarte@gmail.com">
-                                        <img class="img-fluid" alt="My email" src="images/icon/email@3x.png"
-                                        width=45" height="45">
-                                    </a>
-                                </div>
-
-                                <div class="col-4" style="z-index:3; position:relative;">
-                                    <a href="https://www.linkedin.com/in/alb%C3%A9ric-de-lajarte/">
-                                        <img class="img-fluid" alt="My Linkedin" src="images/icon/linkedin@3x.png"
-                                        width=45" height="45">
-                                    </a>
-                                </div>
-     
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Projects cards -->
                 <!-- <div class="col-sm-9" style="height: 600px; overflow-y: scroll;"  > -->
-                <div class="col-md-9 project-grid">
+                <div class="col-md-12">
+
+                    <div class="row align-items-end card-presentation" style="margin-bottom: 1%;">
+
+                        <div class="col-sm-6 main-block">
+
+                            <h1  class="text-name">
+                                Alberic de Lajarte
+                            </h1>
+                            <h3 class="text-presentation">
+                                Robotics and aerospace engineer
+                            </h3>
+
+                            <p class="text-presentation">
+
+                                MSc in Robotics and Space technologies, 
+                                I have a good background in systems and control theory for 
+                                robotic systems, and acquired practical experience through 
+                                many extra-curriculum projects.
+                            </p>
+
+                            <p class="text-presentation">
+
+                                I am currently working as a Reasearch Engineer at the Learning
+                                Algorithm and System Laboratory of EPFL, in Switzerland.
+                            </p>
+
+
+                        </div>
+
+                        <div class="col-sm-4 main-image">
+                            <img src="images/pp/profile-picture-nobg-1.png" class="img-fluid " alt="">
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-bottom: 1%;">
+
+                        <div class="col">
+
+                            <div class="d-flex justify-content-center">
+                                
+                                <h3 class="text-presentation">
+                                    Skills
+                                </h3>
+
+                             </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row card-skill" style="margin-bottom: 4%;">
+
+                        <div class="col-sm-4 d-flex justify-content-center">
+
+                            <div class="skill-title"> 
+                                
+                            Computer science 
+
+                                <ul class="skill-list">
+                                    <li>C/C++</li>
+                                    <li>ROS</li>
+                                    <li>Python/MATLAB</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 d-flex justify-content-center">
+
+                            <div class="skill-title"> 
+                                
+                            System and Control
+
+                                <ul class="skill-list">
+                                    <li>Optimal Control</li>
+                                    <li>Numerical simulation</li>
+                                    <li>State estimation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 d-flex justify-content-center">
+
+                            <div class="skill-title"> 
+                                
+                            Industrial Design
+
+                                <ul class="skill-list">
+                                    <li>Computer Aided Design</li>
+                                    <li>Printed Circuit Boards</li>
+                                    <li>Fast prototyping</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+
+                    <div class="row" style="margin-bottom: 3%;">
+
+                        <div class="col">
+
+                            <div class="d-flex justify-content-center">
+                                
+                                <h3 class="text-presentation">
+                                    My projects
+                                </h3>
+
+                             </div>
+                        </div>
+                    </div>
                     
 
                     <!-- First row -->
@@ -91,7 +158,7 @@
                         </div>
 
                         <div class="col-sm">
-                            <div class="card card-project  dark-card">
+                            <div class="card dark-card project-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Development of an anti-tremor pen</h5>
                                     <p class="card-text" style="color:#858484";>
@@ -131,12 +198,14 @@
                         </div>
 
                         <div class="col-sm">
-                            <div class="card dark-card">
+                            <div class="card dark-card project-card">
                                 <div class="card-header">
                                     <h5 class="card-title">Master thesis: GNC of a sounding rocket</h5>
                                     <p class="card-text" style="color:#858484";>
                                         <small>Automatic Control Laboratory <br>
                                             Dec. 2020 - July. 2021 </small>
+
+                                            
                                     </p>
                                 </div>
                                 <div class="card-body">
@@ -157,7 +226,7 @@
                     <div class="row mt-2">
                         <div class="col-sm">
                             
-                            <div class="card dark-card">
+                            <div class="card dark-card project-card">
                              
                                 <div class="card-header">                   
                                     <h5 class="card-title">Student project: Project Manager</h5>

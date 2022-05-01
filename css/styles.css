@@ -11308,10 +11308,12 @@ textarea.form-control-lg {
   border: 0.5px solid var(--line-color);
 }
 
-.dark-card:hover{
+.project-card{
+  border: 0.5px solid #39008e;
+}
 
+.project-card:hover{
   box-shadow: 0px 0px 15px 0px var(--line-color);
-
 }
 
 .my-title{
@@ -11368,6 +11370,10 @@ textarea.form-control-lg {
 
 
   border: 0.5px solid var(--line-color);
+} 
+
+.profile-card {
+  border-color: #39008e;
 }
 
 
@@ -11404,4 +11410,82 @@ textarea.form-control-lg {
     width: 100%;
   }
 
+}
+
+.card-presentation{
+  padding-top: 0%;
+}
+.card-presentation::after {
+  margin-top: 1%;
+  content: "";
+  position: relative;
+  border-top: 1px solid var(--line-color);
+  left: 37%;
+  width: 25%;
+  height: 0px;
+ }
+
+ .main-block{
+  margin-left: 12.5%;
+}
+
+.main-image{
+  width: 25%;
+}
+
+ @media (max-width:979px) {
+
+  .main-image{
+    display: none;
+    background-color: red;
+    width: 0%;
+  }
+
+  .main-block{
+    margin-left: 10%;
+    width : 80%
+  }
+
+}
+
+.text-name{
+  font-size: 54px;
+  color : #fff;
+  font-family: 'Archivo', sans-serif;
+  text-transform: uppercase;
+}
+
+.text-presentation{
+  padding-top: 1%;
+  color : var(--font-color);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card-skill{
+  color : var(--font-color);
+}
+
+.card-skill::after {
+  content: "";
+  position: relative;
+  border-top: 1px solid var(--line-color);
+  left: 37%;
+  width: 25%;
+  height: 0px;
+ }
+
+.skill-title{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+
+  margin-bottom: 5%;
+}
+
+.skill-list{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+
+  margin-top: 10%;
 }
