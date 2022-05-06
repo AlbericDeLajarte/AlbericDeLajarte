@@ -71,33 +71,32 @@
 
                     <p class="text-justify">
 
-                        My master thesis was part of project Icarus, and supervised by 
+                        My master thesis was part of project Icarus and supervised by 
                         professor <a href="https://www.linkedin.com/in/colin-jones-b04a663/">Colin Jones</a>
                         and <a href="https://www.linkedin.com/in/peter-listov-66b41856/">Dr. Peter Listov</a> of the
                         Automatic Control Laboratory at EPFL.
                         <br>
-                        Besides my management 
-                        responsibilities, I had to work on new guidance, navigation and control (GNC)
-                        algorithms for our student developed rockets.
+                        Besides managing the project, I had to work on a new guidance, navigation, and control (GNC)
+                        algorithms for our student-developed rockets.
                         <br>
 
-                        I developed two Model Predictive Control algorithms: one attitude and position tracking,
+                        I developed two Model Predictive Control algorithms: one for attitude and position tracking,
                         and the other one for optimal trajectory planning. 
 
                         <figure class="figure text-center" style="max-width:50%; float:right;">
-                            <img src="../images/GUI_simulator.png" class="figure-img img-fluid mx-2 d-block rounded border border-secondary" alt="simulator GUI">
+                            <img src="../images/thesis/GUI_simulator.png" class="figure-img img-fluid mx-2 d-block rounded border border-secondary" alt="simulator GUI">
                             <figcaption class="figure-caption text-center">Simulator GUI based on ROS</figcaption>
                         </figure>
 
                         I realized the need for a 
-                        common framework for better cooperation between the students projects, so I developed
+                        common framework for better cooperation between the student projects, so I developed
                         the open-source <a href="https://github.com/EPFLRocketTeam/real_time_simulator">real_time_simulator</a>
                         project based on ROS, which defines a modular software and hardware architecture, an interface
                         to a custom real-time rocket simulator, and to our test bench for Hardware-in-the-Loop tests.
 
                         <br>
-                        This framework was used on two major project last year. The first one was
-                        for a custom drone we built as a test plateform for our algorithms. 
+                        This framework was used on two major projects last year. The first one was
+                        for a custom drone we built as a test platform for our algorithms. 
                         Most of these algorithms were developed by 
                         <a href="https://www.linkedin.com/in/raphael-linsen/">Raphaël Linsen</a>,
                         then tested with the team. You can find more information on
@@ -105,23 +104,23 @@
                         <br>
 
                         <figure class="figure text-center p-2" style="max-width:25%; float:left;">
-                            <img src="../images/drone_prototype.jpeg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="custom drone">
+                            <img src="../images/thesis/drone_prototype.jpeg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="custom drone">
                             <figcaption class="figure-caption text-center">Our custom drone</figcaption>
                         </figure>
                         
-                        The second project was an altitude controller meant to be deployed
-                        on our Bellalui 2 rocket for the EuRoc competition.
+                        The second project was an altitude controller for
+                        our Bellalui 2 rocket flying at the 2021 EuRoc competition.
                         The goal was to reach a precise altitude at apogee 
-                        by controlling the shutdwn time of our engine to reach the apogee balistically.
+                        by controlling the shutdown time of our engine to reach the apogee ballistically.
                         I used my MPC-based trajectory planner to predict the apogee and a continuous-time
-                        kalman filter to estimate the rocket state. As we only have one chance to launch the rocket,
-                        the biggest challenge for me was to test the GNC reliably on th ground. 
-                        Using my simulator, we could do software and processor in-the loop tests,
+                        Kalman filter to estimate the rocket state. As we only have one chance to launch the rocket,
+                        the biggest challenge for me was to test the GNC reliably on the ground. 
+                        Using my simulator, we could do software and processor-in-the-loop tests,
                         so the final GNC was completely nominal during the launch and 
-                        our team won the European competition !
+                        our team won the European competition!
 
                         <figure class="figure text-center" style="max-width:90%; margin-left: 5%;">
-                            <img src="../images/euroc-team.jpg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="euroc team">
+                            <img src="../images/thesis/euroc-team.jpg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="euroc team">
                             <figcaption class="figure-caption text-center">The EuRoC team after a successful flight</figcaption>
                         </figure>
                         
