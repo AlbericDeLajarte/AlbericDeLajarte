@@ -11526,6 +11526,7 @@ textarea.form-control-lg {
   box-shadow: 0px 0px 10px 0px var(--line-color);
 }
 
+
  @media (min-width:979px) {
   .profile-card {
     position:fixed;
@@ -11539,8 +11540,8 @@ textarea.form-control-lg {
 
   .project-description{
 
-    margin-left: 25%;
-    width: 57%;
+    margin-left: 16.7%;
+    width: 65%;
     margin-right: 10px;
 
   }
@@ -11553,11 +11554,33 @@ textarea.form-control-lg {
 
 @media (max-width:979px) {
 
-  .progression-bar{
+  .project-description{
+
     margin-left: 1%;
+    width: 98%;
     margin-right: 1%;
-    width: 100%;
+
   }
+
+  .profile-card {
+    margin-left: 3%;
+    margin-right: 4%;
+    order:2;
+    width: 45%;
+  }
+
+  .progression-bar{
+    width: 45%;
+    order:3;
+  }
+
+}
+
+.project-description{
+
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
 
 }
 
