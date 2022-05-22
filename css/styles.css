@@ -11423,6 +11423,20 @@ textarea.form-control-lg {
   margin-bottom: 7%;
 }
 
+.project-read_more{
+
+  color:white;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+
+  margin-top: 15%;
+  margin-bottom: 0%;
+  font-style: italic; 
+
+}
+
 .project-card-content{
 
   font-family: 'Open Sans', sans-serif;
@@ -11631,3 +11645,7 @@ textarea.form-control-lg {
 
 }
 
+.inline-icon {
+  vertical-align: middle;
+  font-size: 26px !important;
+}
