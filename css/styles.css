@@ -11573,7 +11573,7 @@ textarea.form-control-lg {
   border: 0.5px solid var(--line-color);
  }
 
-.project-description{
+.project-page{
   color: var(--font-color);
 
   background: #2B2C36;
@@ -11615,7 +11615,7 @@ textarea.form-control-lg {
 
   }
 
-  .project-description{
+  .project-page{
 
     margin-left: 1%;
     width: 98%;
@@ -11631,7 +11631,7 @@ textarea.form-control-lg {
 
 @media (max-width:979px) {
 
-  .project-description{
+  .project-page{
 
     margin-left: 1%;
     width: 98%;
@@ -11653,7 +11653,7 @@ textarea.form-control-lg {
 
 }
 
-.project-description{
+.project-page{
 
   padding-left: 2%;
   padding-right: 2%;
@@ -11689,4 +11689,74 @@ textarea.form-control-lg {
 .inline-icon {
   vertical-align: middle;
   font-size: 26px !important;
+}
+
+
+
+
+/* New stuff */
+
+.project-container {
+  /* border: 2px solid white; Add a border to the button */
+  margin: 50px; /* Remove margin */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center content */
+  padding: 20px; /* Add padding inside each project container */
+  box-shadow: none; /* Remove shadow */
+}
+.image-container {
+  position: relative;
+  padding-bottom: 65%; /* 75% of the width for a 3:4 aspect ratio */
+  overflow: hidden;
+  }
+
+.image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  transition: transform 0.3s;
+  border-radius: 10px; /* Add rounded corners to images */
+  }
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+
+.project-description {
+  color : var(--font-color);
+  flex: 1;
+  padding: 20px; /* Add padding inside description for spacing */
+}
+.project-description h1 {
+  text-align: left; /* Always align heading to the left */
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 8%;
+}
+.project-description p {
+  text-align: left; /* Align description text to the left by default */
+  font-size: 1.1em;
+  margin-bottom: 5%;
+
+}
+.project-description a.btn-primary {
+  display: inline-block;
+  background-color: transparent; /* Make the button background transparent */
+  color: white; /* Button text color */
+  padding: 8px 16px; /* Add padding to the button */
+  border: 2px solid white; /* Add a border to the button */
+  border-radius: 25px; /* Increase border radius for a rounded appearance */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Transition for background color and text color */
+}
+.project-description a.btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent background color on hover */
+  color: white; /* Text color on hover */
+}
+/* Right-align text when image is on the right */
+.project-container.text-on-right .project-description {
+  text-align: right;
 }
