@@ -104,14 +104,14 @@
                         of the throwing trajectories.
                         <br> <br>
 
-                        <figure class="figure text-center" style="width:60%; float:right; margin-left: 2%; border: solid black">
-                            <img src="../images/mpc/throwing-snapshot.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
-                            <figcaption class="figure-caption text-center">Throwing motion</figcaption>
+                        <figure class="figure text-center" style="width:50%; float:right; margin-left: 2%;">
+                            <img src="../images/mpc/robot_plateform.jpg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                            <figcaption class="figure-caption text-center">Robot arm and moving platform. Credit: Darko-project</figcaption>
                         </figure>
 
                         The problem of chosing a throwing motion is highly dimensional: given a target position,
                         there are many ways to throw an object to reach the target, with different angles, velocity and release position.
-                        Our robot arm was mounted on an omni-directional platform,
+                        Our robot arm is mounted on an omni-directional platform,
                         so all throwing configurations can be reached. A separate program was thus developed by 
                         <a href="https://www.linkedin.com/in/yang-liu-609b82134/">Yang Liu</a> to find all these configuration,
                         and select the best one in real-time. This throwing configuration is transformed into a target joint position and velocity 
@@ -127,12 +127,13 @@
                         \[  \dot{\vec{x}} = \vec{f}(\vec{x}, \vec{u}) = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \vec{x} + \begin{pmatrix} 0 \\ 1 \end{pmatrix} \vec{u} \]
                         
                         We add to that joint position, velocity and acceleration limits, and as a final twist, non-linear constraints on the torque \(\vec{\tau}\) and end-effector position \(\vec{p}\):
-                        \[ \vec{\tau} = ID(\vec{x}) < \vec{\tau}_{max} \]
+                        \[ \vec{\tau} = ID(\vec{x}, \vec{u}) < \vec{\tau}_{max} \]
                         \[ p = FK(\vec{x}) \in B \]
 
-                        \(ID(\vec{x})\) and \(FK(\vec{x})\) are the Inverse Dynamics and Forward Kinematics of the robot, 
+                        \(ID(\vec{x}, \vec{u})\) and \(FK(\vec{x})\) are the Inverse Dynamics and Forward Kinematics of the robot, 
                         whose analytical value and Jacobian are provided 
-                        by the <a href="https://github.com/stack-of-tasks/pinocchio">Pinocchio library</a>.
+                        by the <a href="https://github.com/stack-of-tasks/pinocchio">Pinocchio library</a>. \(B\) is the allowed workspace of
+                        the robot's end-effector.
                         <br>
                         The complete formulation of the problem is:
 
@@ -143,7 +144,7 @@
                                 \begin{cases}
                                 \vec{x}(0) = \vec{x}_0, \quad \vec{x}(1) = \vec{x}_t \\
                                 \dot{\vec{x}} = \alpha \vec{f}(\vec{x}, \vec{u}) \\
-                                \vec{\tau} = ID(\vec{x}) < \vec{\tau}_{max} \\
+                                \vec{\tau} = ID(\vec{x}, \vec{u}) < \vec{\tau}_{max} \\
                                 p = FK(\vec{x}) \in B \\
                                 \vec{q} \le \vec{q}_{max}, \quad \dot{\vec{q}} \le \dot{\vec{q}}_{max}, \quad \ddot{\vec{q}} \le \ddot{\vec{q}}_{max}
                                 \end{cases}       
@@ -155,7 +156,7 @@
                         <br> <br><br>
                         <figure class="figure text-center" style="width:70%; float:right; margin-left: 4%;">
                             <img src="../images/mpc/trajectories.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
-                            <figcaption class="figure-caption text-center">Example trajectory generated for the two first joints</figcaption>
+                            <figcaption class="figure-caption text-center">Example trajectory generated for the two first joints. The dotted lines are the limits and target.</figcaption>
                         </figure>
 
                         This Optimal Control Problem is solved with Sequential Quadratic programming (SQP) using 

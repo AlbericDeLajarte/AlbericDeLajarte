@@ -100,7 +100,7 @@
 
                         My master thesis was part of <a href="icarus_description.html"> Project Icarus </a> and supervised by 
                         <a href="https://www.linkedin.com/in/colin-jones-b04a663/"> Professor Colin Jones</a>
-                        and <a href="https://www.linkedin.com/in/peter-listov-66b41856/">Dr. Peter Listov</a> of the
+                        and <a href="https://www.linkedin.com/in/petr-listov/">Dr. Peter Listov</a> of the
                         Automatic Control Laboratory at EPFL.
                         Besides managing the project, I had to work on new guidance, navigation, and control (GNC)
                         algorithms for our student-developed rockets.
@@ -143,13 +143,13 @@
                         our Bellalui 2 rocket flying at the 2021 EuRoc competition.
                         The goal was to reach a precise altitude at apogee 
                         by controlling the thrust level of our rocket engine. The model was simplified to
-                        ignore orientation variation:
+                        ignore orientation dynamics:
 
                         \[ 
                         \vec{x} = \begin{pmatrix} \vec{p} \\ \vec{v} \\ m \end{pmatrix} 
                         \quad
                         \quad
-                        \dot{\vec{x}} = \begin{pmatrix} \vec{v} \\ \frac{T*cos(\theta) - Cv^2}{m} -g_0 \\ \frac{T}{g_0*Isp} \end{pmatrix} 
+                        \dot{\vec{x}} = \begin{pmatrix} \vec{v} \\ \frac{T*cos(\theta) - Cv^2}{m} -g_0 \\ \frac{-T}{g_0*Isp} \end{pmatrix} 
 
                         \]
 
