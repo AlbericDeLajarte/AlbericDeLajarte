@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>MPC motion planner project</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
+
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    </head>
+
+    <body style="background: #20202A;">
+        <!-- Page content-->
+        <div class="container-fluid"> 
+            <div class="row card-presentation" style="position: relative; margin-bottom: 4%; padding-top: 2%;">
+                <a href="../index.html" class="stretched-link"></a>
+
+    
+                <div class="col-sm-7 main-block-project">
+                    
+
+                    <h1  class="text-name">
+                        Alberic de Lajarte
+                    </h1>
+                    <h3 class="text-presentation">
+                        Robotics and aerospace engineer
+                    </h3>
+        
+                    <br>
+
+                    <div class="row" style="margin-bottom: 3%; margin-top: 5%;">
+
+                        <div class="col-3 social-media">
+                            <a href="https://github.com/AlbericDeLajarte">
+                                <img class="img-fluid" alt="My Github" src="../images/icon/github@3x.png"
+                                width=45" height="45">
+                            </a>
+                        </div>
+
+                        <div class="col-3 social-media">
+                            <a href = "mailto: albericlajarte@gmail.com">
+                                <img class="img-fluid" alt="My email" src="../images/icon/email@3x.png"
+                                width=45" height="45">
+                            </a>
+                        </div>
+
+                        <div class="col-3 social-media">
+                            <a href="https://www.linkedin.com/in/alberic-de-lajarte/">
+                                <img class="img-fluid" alt="My Linkedin" src="../images/icon/linkedin@3x.png"
+                                width=45" height="45">
+                            </a>
+                        </div>
+
+                        <div class="col-3 social-media">
+                            <a href="../images/CV.pdf">
+                                <img class="img-fluid" alt="My CV" src="../images/icon/CV.png"
+                                width=45" height="45">
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-3">
+                    <img src="../images/pp/profile-picture-nobg-2.png" class="rounded-circle profile-picture" alt="..." >
+                </div>
+
+                    
+    
+      
+                </div>
+
+
+
+                <!-- Projects description -->
+                <div class="col-md-10 project-page">
+                    <h1 class="pt-3"> A fast MPC motion planner for robot throwing</h1>
+                    <h4 style="color:#858484";> LASA: March. 2022 - Nov. 2022 </h4>
+
+                    <!-- List of keywords -->
+                    <div class="keywords"> C++ </div>
+                    <div class="keywords"> Real-time Planning </div>
+                    <div class="keywords"> MPC </div>
+                    <div class="keywords"> Non-linear Optimization </div>
+
+                    <a href="https://github.com/AlbericDeLajarte/mpc_motion_planner" class="github-project"> Check on Github</a>
+
+                    <!-- Project description -->
+                    <div class="text-justify" style="font-size: large; text-align: justify">
+
+                        This project is part of <a href="https://darko-project.eu/">DARKO</a>, a European project researching new
+                        agile ways to control robots in dynamic environment. My lab is working on the algorithms to execute throwing motions,
+                        allowing the robot to increase its reachability and productivity. I was tasked to work on the control and planning
+                        of the throwing trajectories.
+                        <br> <br>
+
+                        <figure class="figure text-center" style="width:50%; float:right; margin-left: 2%;">
+                            <img src="../images/mpc/robot_plateform.jpg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                            <figcaption class="figure-caption text-center">Robot arm and moving platform. Credit: Darko-project</figcaption>
+                        </figure>
+
+                        The problem of chosing a throwing motion is highly dimensional: given a target position,
+                        there are many ways to throw an object to reach the target, with different angles, velocity and release position.
+                        Our robot arm is mounted on an omni-directional platform,
+                        so all throwing configurations can be reached. A separate program was thus developed by 
+                        <a href="https://www.linkedin.com/in/yang-liu-609b82134/">Yang Liu</a> to find all these configuration,
+                        and select the best one in real-time. This throwing configuration is transformed into a target joint position and velocity 
+                        \(\vec{x_t}=\begin{pmatrix} \vec{q_t} \\ \dot{\vec{q_t}} \end{pmatrix}\), 
+                        which is then given to the planner to be reached.
+
+                        <br> <br>
+                        The motion planner takes this target position and velocity, and creates a trajectory that reaches it from the
+                        current position and velocity \(\vec{x_0}\). As there are an infinite number of trajectories that connects these two state, we search
+                        for the minimum time one. In this problem, we use the robot acceleration as the controlled variable \(\vec{u}\), which makes it
+                        a classic double integrator problem:
+
+                        \[  \dot{\vec{x}} = \vec{f}(\vec{x}, \vec{u}) = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \vec{x} + \begin{pmatrix} 0 \\ 1 \end{pmatrix} \vec{u} \]
+                        
+                        We add to that joint position, velocity and acceleration limits, and as a final twist, non-linear constraints on the torque \(\vec{\tau}\) and end-effector position \(\vec{p}\):
+                        \[ \vec{\tau} = ID(\vec{x}, \vec{u}) < \vec{\tau}_{max} \]
+                        \[ p = FK(\vec{x}) \in B \]
+
+                        \(ID(\vec{x}, \vec{u})\) and \(FK(\vec{x})\) are the Inverse Dynamics and Forward Kinematics of the robot, 
+                        whose analytical value and Jacobian are provided 
+                        by the <a href="https://github.com/stack-of-tasks/pinocchio">Pinocchio library</a>. \(B\) is the allowed workspace of
+                        the robot's end-effector.
+                        <br>
+                        The complete formulation of the problem is:
+
+                        \[ \underset{\vec{x}, \vec{u}, \alpha}{min}( \int_{0}^{1} \alpha\,dt), \quad s.t:\]
+
+                        \[
+                            \begin{equation}
+                                \begin{cases}
+                                \vec{x}(0) = \vec{x}_0, \quad \vec{x}(1) = \vec{x}_t \\
+                                \dot{\vec{x}} = \alpha \vec{f}(\vec{x}, \vec{u}) \\
+                                \vec{\tau} = ID(\vec{x}, \vec{u}) < \vec{\tau}_{max} \\
+                                p = FK(\vec{x}) \in B \\
+                                \vec{q} \le \vec{q}_{max}, \quad \dot{\vec{q}} \le \dot{\vec{q}}_{max}, \quad \ddot{\vec{q}} \le \ddot{\vec{q}}_{max}
+                                \end{cases}       
+                            \end{equation}
+                        
+                        \]
+
+                        With \( \alpha \) a constant time scaling factor that is used to minimize the trajectory.
+                        <br> <br><br>
+                        <figure class="figure text-center" style="width:70%; float:right; margin-left: 4%;">
+                            <img src="../images/mpc/trajectories.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary" alt="">
+                            <figcaption class="figure-caption text-center">Example trajectory generated for the two first joints. The dotted lines are the limits and target.</figcaption>
+                        </figure>
+
+                        This Optimal Control Problem is solved with Sequential Quadratic programming (SQP) using 
+                        <a href="https://github.com/PREDICT-EPFL/polympc">PolyMPC</a>, a fast MPC library written in
+                        C++ by <a href="https://www.linkedin.com/in/petr-listov/">Peter Listov</a>.
+                        <br>
+
+
+                        The complete algorithm was written in C++, which allowed to compute a new trajectory in 200ms.
+                        This is enough for real-time replanning of the trajectory in case of a moving target or obstacles,
+                        as you can see on the video below.
+                        <br> <br><br> 
+                        
+                        More importantly, this new planner is much more reliable than <a href="https://ruckig.com/"> Ruckig</a>,
+                        the previous planner used which does not consider position limit and non-linear constraint.
+                        Adding these constraints avoid the robot triggering its safety mode which happenned often with the previous planner,
+                        and made impossible continous operation.
+                        <br><br>
+
+                        <figure class="figure text-center" style="width:100%; float:right; margin-left: 2%;">
+                            <video width="100%" controls loop muted>
+                                <source src="../images/mpc/reactive_motion.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        <figcaption class="figure-caption text-center">Example of reactive motion enabled with real-time planning</figcaption>
+                        </figure>
+                    </div>
+                        
+                
+                </div> 
+
+            </div>
+
+        </div> 
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>

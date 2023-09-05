@@ -11,17 +11,19 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
         <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
+
+        <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
 
     <body style="background: #20202A;">
         <!-- Page content-->
         <div class="container-fluid"> 
-            <div class="row" style="margin-bottom: 4%; padding-top: 2%; position: relative;">
+            <div class="row card-presentation" style="position: relative; margin-bottom: 4%; padding-top: 2%;">
 
                 <a href="../index.html" class="stretched-link"></a>
 
-                <!-- <div class="col-sm-1 border">
-                </div> -->
 
                 <div class="col-sm-7 main-block-project">
 
@@ -51,7 +53,7 @@
                         </div>
 
                         <div class="col-3 social-media">
-                            <a href="https://www.linkedin.com/in/alb%C3%A9ric-de-lajarte/">
+                            <a href="https://www.linkedin.com/in/alberic-de-lajarte/">
                                 <img class="img-fluid" alt="My Linkedin" src="../images/icon/linkedin@3x.png"
                                 width=45" height="45">
                             </a>
@@ -73,33 +75,41 @@
                     <img src="../images/pp/profile-picture-nobg-2.png" class="rounded-circle profile-picture" alt="..." >
                 </div>
 
-                
-
-  
             </div>
 
 
 
                 <!-- Projects description -->
-                <div class="col-md-9 project-description">
-                    <h4 class="pt-3"> Master thesis: GNC of a sounding rocket</h4>
-                    <h6 style="color:#858484";> EPFL Rocket Team : Dec. 2020 - July. 2021 </h6>
+                <div class="col-md-10 project-page">
+                    <h1 class="pt-3"> Master thesis: GNC of a sounding rocket</h1>
+                    <h4 style="color:#858484";> EPFL Rocket Team : Dec. 2020 - July. 2021 </h4>
 
-                    <p class="text-justify">
+                    <!-- List of keywords -->
+                    <div class="keywords"> ROS </div>
+                    <div class="keywords"> C++ </div>
+                    <div class="keywords"> Python </div>
+                    <div class="keywords"> Real-time Simulation </div>
+                    <div class="keywords"> GNC </div>
 
-                        My master thesis was part of project Icarus (see <a href="icarus_description.html"> this page</a>) and supervised by 
+                    <a href="https://github.com/EPFLRocketTeam/real_time_simulator" class="github-project"> Check on Github</a>
+                    <a href="../images/thesis/report_thesis.pdf" class="paper-project"> Thesis report</a>
+
+                    <!-- Project description -->
+
+                    <div class="text-justify" style="font-size: large; text-align: justify">
+
+                        My master thesis was part of <a href="icarus_description.html"> Project Icarus </a> and supervised by 
                         <a href="https://www.linkedin.com/in/colin-jones-b04a663/"> Professor Colin Jones</a>
-                        and <a href="https://www.linkedin.com/in/peter-listov-66b41856/">Dr. Peter Listov</a> of the
+                        and <a href="https://www.linkedin.com/in/petr-listov/">Dr. Peter Listov</a> of the
                         Automatic Control Laboratory at EPFL.
-                        <br>
                         Besides managing the project, I had to work on new guidance, navigation, and control (GNC)
                         algorithms for our student-developed rockets.
-                        <br>
+                        <br><br>
 
                         I developed two Model Predictive Control algorithms: one for attitude and position tracking,
                         and the other one for optimal trajectory planning. 
 
-                        <figure class="figure text-center" style="max-width:45%; float:right;">
+                        <figure class="figure text-center" style="width:60%; float:right; margin-left: 2%; margin-top: 2%; margin-bottom: 2%;">
                             <img src="../images/thesis/GUI_simulator.png" class="figure-img img-fluid mx-2 d-block rounded border border-secondary" alt="simulator GUI">
                             <figcaption class="figure-caption text-center">Simulator GUI based on ROS</figcaption>
                         </figure>
@@ -109,47 +119,71 @@
                         the open-source <a href="http://wiki.ros.org/real_time_simulator">real_time_simulator</a>
                         project based on ROS, which defines a modular software and hardware architecture, an interface
                         to a custom real-time rocket simulator, and to our test bench for Hardware-in-the-Loop tests.
-
                         <br>
+                        This framework allows to test algorithms in a very realistic environment, by testing both
+                        the logic of the algorithms and its interface with the hardware.
+
+                        <br><br>
                         This framework was used by two major projects last year. The first one was
                         for a custom drone we built as a test platform for our algorithms. 
                         Most of these algorithms were developed by 
                         <a href="https://www.linkedin.com/in/raphael-linsen/">Raphaël Linsen</a>,
                         then tested with the team. You can find more information on
-                        our recent <a href="https://infoscience.epfl.ch/record/288898">paper</a> to ICRA.
+                        our <a href="https://ieeexplore.ieee.org/document/9811938">paper</a> for ICRA.
                         <br>
 
-                        <figure class="figure text-center p-2" style="max-width:20%; float:left; margin-right: 1%; margin-top: 1%;">
+                        <figure class="figure text-center p-2" style="width:40%; float:left; margin-right: 2%; margin-top: 2%;">
                             <img src="../images/thesis/drone_prototype.jpeg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="custom drone">
                             <figcaption class="figure-caption text-center">Our custom drone</figcaption>
                         </figure>
+
+                        <br><br>
                         
                         The second project was an altitude controller for
                         our Bellalui 2 rocket flying at the 2021 EuRoc competition.
                         The goal was to reach a precise altitude at apogee 
-                        by controlling the shutdown time of our engine to reach the apogee ballistically.
-                        I used my MPC-based trajectory planner to predict the apogee and a continuous-time
-                        Kalman filter to estimate the rocket state. As we only have one chance to launch the rocket,
-                        the biggest challenge for me was to test the GNC reliably on the ground. 
-                        Using my simulator, we could do software and processor-in-the-loop tests,
+                        by controlling the thrust level of our rocket engine. The model was simplified to
+                        ignore orientation dynamics:
+
+                        \[ 
+                        \vec{x} = \begin{pmatrix} \vec{p} \\ \vec{v} \\ m \end{pmatrix} 
+                        \quad
+                        \quad
+                        \dot{\vec{x}} = \begin{pmatrix} \vec{v} \\ \frac{T*cos(\theta) - Cv^2}{m} -g_0 \\ \frac{-T}{g_0*Isp} \end{pmatrix} 
+
+                        \]
+
+                        with \( \vec{p} \) the position, \( \vec{v} \) the velocity, \( m \) the mass, \( \theta \) the angle 
+                        to the vertical, \( C \) the drag coefficient, \( g_0 \) the Earth gravity, \( Isp \) the rocket efficiency,
+                        and \( T \) the rocket thrust that is being controlled.
+                        <br>
+                        
+                        I used a MPC based trajectory planner to compute the optimal thrust over time,
+                        with the goal of minimizing the fuel consumption.
+
+                        <br><br>
+                        To get a reliable estimate of the rocket's state, the full 3D model of the rocket was used,
+                        with Newton-Euler dynamics. This model is integrated into an Extended Kalman Filter to 
+                        fuse the sensor data from the gyroscope, accelerometer and barometer.
+
+
+                        <br><br><br>
+                        One of the biggest challenge for me was to test these complex algorithms reliably on the ground,
+                        without any test flight.
+                        Using my simulator, we tested extensively in software and processor-in-the-loop configuration,
                         so the final GNC was completely nominal during the launch and 
                         our team won the European competition!
 
                         <br>
 
-                        I am continuing to develop this framework as of today, as a new generation of student
-                        is continuing our work and need support to develop new features. One of our objective
-                        is to finish the development of the test bench and its integration with the simulator
-                        to do Hardware-in-the-Loop simulation.
-
                         <br> <br>
 
-                        <figure class="figure text-center" style="max-width:80%; margin-left: 10%;">
+                        <figure class="figure text-center" style="width:100%;">
                             <img src="../images/thesis/euroc-team.jpg" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="euroc team">
                             <figcaption class="figure-caption text-center">The EuRoC team after a successful flight</figcaption>
                         </figure>
                         
-                    </p>
+                    </div>
                     
 
                 

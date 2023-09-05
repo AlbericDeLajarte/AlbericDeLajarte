@@ -11,6 +11,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
         <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
+
+        <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
     </head>
 
     <body style="background: #20202A;">
@@ -18,8 +22,7 @@
         <div class="container-fluid"> 
 
 
-
-            <div class="row" style="margin-bottom: 4%; padding-top: 2%; position: relative;">
+            <div class="row card-presentation" style="position: relative; margin-bottom: 4%; padding-top: 2%;">
 
                 <a href="../index.html" class="stretched-link"></a>
 
@@ -54,7 +57,7 @@
                         </div>
 
                         <div class="col-3 social-media">
-                            <a href="https://www.linkedin.com/in/alb%C3%A9ric-de-lajarte/">
+                            <a href="https://www.linkedin.com/in/alberic-de-lajarte/">
                                 <img class="img-fluid" alt="My Linkedin" src="../images/icon/linkedin@3x.png"
                                 width=45" height="45">
                             </a>
@@ -83,17 +86,25 @@
 
 
 
-                <!-- Projects description -->
-            <div class="col-md-7 project-description">
-                <h4 class="pt-3" > Manager of Project Icarus</h4>
-                <h6 style="color:#858484";> EPFL Rocket Team : Aug. 2020 - Sept. 2021 </h6>
+            <!-- Projects description -->
+            <div class="col-md-10 project-page">
+                <h1 class="pt-3" > Manager of Project Icarus</h1>
+                <h4 style="color:#858484";> EPFL Rocket Team : Aug. 2020 - Sept. 2021 </h4>
 
-                <p class="text-justify">
+                <!-- List of keywords -->
+                <div class="keywords"> Management </div>
+                <div class="keywords"> System engineering </div>
+                <div class="keywords"> Research </div>
+
+                <a href="https://ieeexplore.ieee.org/document/9811938" class="paper-project"> Check paper</a>
+
+                <div class="text-justify" style="font-size: large; text-align: justify">
                     For my third year at the EPFL Rocket Team, I started a new research project to replace our passive 
                     rocket fins stabilization with thrust vector control (TVC), thus allowing us to control the rocket trajectory and explore 
                     propulsive landing technologies.                       
-
-                    <figure class="figure text-center" style="max-width:30%; float:right;">
+                    <br>
+                    
+                    <figure class="figure text-center" style="max-width:50%; float:right; margin-left: 3%; margin-top: 3%;">
                         <img src="../images/icarus/jet_vane_test.jpg" class="figure-img img-fluid mx-2 d-block rounded border border-secondary" alt="jet vanes setup">
                         <figcaption class="figure-caption text-center">First test setup for the jet vanes</figcaption>
                     </figure>
@@ -114,12 +125,12 @@
                     flight computer. This gave us a lot more processing power and lets us
                     experiment with advanced GNC algorithms.
 
-                    <figure class="figure text-center p-2" style="max-width:25%; float:left; margin-right: 1%;">
+                    <figure class="figure text-center p-2" style="width:40%; float:left; margin-right: 1%;">
                         <img src="../images/icarus/cm4_board.png" class="figure-img img-fluid mx-auto d-block rounded border border-secondary " alt="custom pcb for the CM4">
                         <figcaption class="figure-caption text-center">Custom PCB for the RaspberryPi</figcaption>
                     </figure>
 
-                    <br>
+                    <br><br><br><br><br>
                     To control the vehicle, we used Model Predictive Control (MPC) running on the Raspberry Pi
                     at 50Hz to directly control the actuators. Another MPC was used at a lower
                     frequency to generate optimal reference trajectories for the controller.
@@ -158,7 +169,7 @@
                     </div>
 
                 
-                </p>
+                </div>
 
 
             
