@@ -11591,7 +11591,8 @@ textarea.form-control-lg {
 } 
 
 .keywords, 
-.github-project{
+.github-project,
+.paper-project{
   display: inline-block;
   background-color: transparent; /* Make the button background transparent */
   color: var(--font-color);
@@ -11616,6 +11617,17 @@ textarea.form-control-lg {
 .github-project:hover{
   background-color: #6cc644;
   color: white;
+}
+
+.paper-project{
+  margin-left: 5%;
+  border-radius: 3px;
+  font-size: large;
+}
+
+.paper-project:hover{
+  background-color: var(--font-color);
+  color: #20202A;
 }
 
 .profile-content{
